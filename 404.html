@@ -15,15 +15,16 @@
     @media(max-width:640px){.msg{padding:1.5rem}h1{font-size:1.2rem}}
   </style>
 
-  <script>
-    const path = location.pathname;
-    const credentialMatch = path.match(/(.{36})$/i);
-    if (credentialMatch) {
-      location.replace("/#" + credentialMatch[1].toLowerCase() + location.search);
-    } else {
-      location.replace("/");
-    }
-  </script>
+<script>
+  const path = location.pathname;
+  const keyMatch = path.match(/([a-zA-Z0-9_-]{36})$/i);
+
+  if (keyMatch) {
+    location.replace("/#" + keyMatch[1].toLowerCase() + location.search);
+  } else {
+    location.replace("/");
+  }
+</script>
 </head>
 <body>
   <div class="msg">
