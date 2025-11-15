@@ -1,0 +1,65 @@
+{
+  "about_me": "This is the public version; for the most accurate and detailed CV, please connect with me on LinkedIn.\n\nMy passion for AI—particularly in Computer Vision—drives my ambition to pursue a Master’s program and advance my current and future career. During my undergraduate studies, that motivation wasn’t initially well reflected. Nevertheless, this marked a turning point in my academic journey, inspiring a stronger commitment that resulted in excellent grades in the Machine Learning and Artificial Intelligence & Expert Systems modules. Moreover, one of my lecturers, who was diagnosed with cancer during adolescence and successfully overcame it, inspired my aspiration to focus future academic research on medical or facial recognition purposes.\nMy professional career started as an IT Support Specialist and now continues as a DevOps Engineer. With nearly three years of experience, I’m thrilled to embark on my M.Sc. in AI and to leverage my professional and academic background effectively.",
+
+  "work_experience": [
+    {
+      "title": "DevOps Engineer (Hybrid)",
+      "company": "*** visit my Linkedin ***",
+      "time": " Present (20 months)",
+      "content": "• Migrated disaster-recovery servers to Docker, Ansible, and GitLab CI/CD pipelines\n• Led Massive PostgreSQL migration\n• Monitoring & troubleshooting with Kibana, Zabbix, ELK Stack including Elasticsearch\n• Involved in Agile sprints of the development team, contributing to features development and enhancements."
+    },
+    {
+      "title": "IT Support Specialist",
+      "company": "*** visit my Linkedin ***",
+      "time": "15 months",
+      "content": "• Resolved critical incidents via log analysis (Nginx, API Gateway, uWSGI)\n• Automated workflows and contributed hotfixes to backend services"
+    }
+  ],
+
+  "education": [
+    {
+      "title": "Computer Engineering",
+      "school": "at *************",
+      "time": " Since 2022",
+      "content": "GPA: ≈ 3.3 \nForeign Languages:\n• English: IELTS Academic 6.5 (2025)"
+    }
+  ],
+
+  "skills": {
+    "programming": ["Python", "SQL", "Bash", "and (PHP, C# long time ago)"],
+    "devops_cloud": ["Docker", "Ansible", "GitLab CI", "Nginx", "ELK Stack", "Nexus", "Zabbix"],
+    "databases": ["PostgreSQL", "SQL Server", "Redis"],
+    "ai_ml": ["OpenCV", "Haar Cascades", "Supervised ML (Stanford Coursera)", "NumPy (limited)"]
+  },
+
+  "featured_project": {
+    "title": "Eye-Zoom – Real-Time Eye Tracking for Accessibility",
+    "time": "B.Sc. Final Project",
+    "description": "Developed a hands-free web browser controller using Python + OpenCV (Haar Cascade classifiers) that detects and tracks eye movements in real time. Designed specifically for users with severe physical disabilities.",
+    "features": "• Zoom in/out (& basic navigation in future) via eye gestures"
+  },
+
+  "certificates": [
+    "Supervised Machine Learning (Stanford – DeepLearning.AI)",
+    "Python for Everybody (University of Michigan)",
+    "Google IT Support Professional Certificate",
+    "LPIC-1 Linux Administrator"
+  ],
+
+  "interests": [
+    "Teaching computer literacy to elderly (250+ hours experience)",
+    "Robotics & IoT (Arduino, Raspberry Pi)",
+    "Competitive Programming (ACM ICPC, ICTChallenge)",
+    "Hiking & outdoor resilience"
+  ],
+
+  "contact": {
+    "name": "Saeed Eshaghzaei",
+    "phone": "+98 *** *******",
+    "email": "*********@gmail.com",
+    "location": "Tehran, Iran",
+    "linkedin": "linkedin.com/in/saeedey",
+    "github": "github.com/SaeedEY"
+  },
+  "updated": "15 November 2025"
+}
