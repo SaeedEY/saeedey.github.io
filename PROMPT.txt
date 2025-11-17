@@ -1,0 +1,83 @@
+Generate a complete, modern, privacy-first, multilingual, static online academic CV with this exact architecture and behavior:
+
+### Core Requirements
+1. Project must be 100% static (HTML + CSS + vanilla JS only, no frameworks, no backend)
+2. Must work perfectly on GitHub Pages, Netlify, Vercel, Cloudflare Pages
+3. Must be completely invisible to all search engines and AI crawlers
+
+### Exact File Structure
+.
+├── index.html
+├── 404.html
+├── robots.txt
+├── PROMPT.txt                 ← this prompt
+├── README.md
+├── generate-bin.py            ← Python script that encrypts all private templates
+├── data/
+│   ├── public.json            ← public redacted CV
+│   ├── schema.json            ← full JSON schema with comments
+│   ├── resume.bin             ← final encrypted binary (multiple AES-GCM payloads)
+│   └── private/
+│       ├── academic_de.json   ← full German version
+│       ├── academic_uk.json   ← full UK English version
+│       └── academic_ca.json   ← full Canadian English version
+├── css/style.css              ← minified, <3 KB
+├── js/main.js                 ← fully commented vanilla JS
+└── .gitignore                 ← contains: data/private
+
+### Privacy & Access System (exact behavior)
+- Public version loads from data/public.json
+- Private versions are encrypted inside data/resume.bin as multiple independent AES-GCM payloads
+- generate-bin.py reads every JSON in data/private/, encrypts each with its own 36-char key (UUIDv4 or custom), appends all payloads into resume.bin
+- Access via URL hash only: https://domain.com/#550e8400-e29b-41d4-a716-426614174000
+- main.js reads location.hash → normalizes to lowercase → tries to decrypt every payload in resume.bin using the hash as password
+- First successful decryption wins → instantly renders full private CV (no page reload)
+- If no valid key → show public version + subtle "Detailed version available upon request"
+- Case-insensitive keys, always stored/normalized as lowercase
+
+### 404.html Behavior
+- Must detect any 36-character string (alphanumeric + -_) at the end of the path
+- Regex: /([a-zA-Z0-9_-]{36})$/i
+- Instantly redirect /any36charstring → /#any36charstring (lowercase) + preserve query string
+- Clean centered "Redirecting..." message with noindex meta tags
+- Must include meta blocks for GPTBot, ClaudeBot, PerplexityBot, Googlebot, etc.
+
+### Design & Typography (exact style)
+- Ultra-compact single-column academic layout (no sidebar ever)
+- Header: Name (Libre Baskerville, large), tagline, one-line contact bar
+- Contact bar format: Location • email • LinkedIn • GitHub • ORCID • phone
+  → all clickable, text-only, separated by •, ORCID in official green (#a6d189)
+- Gradient top bar (purple → pink)
+- Framed entries (education, experience, publications) with subtle border + hover lift
+- One featured project as highlighted card
+- Consistent bullet indentation across all sections (especially Certificates, Interests, Work Experience)
+- Minimal footer: "17 Nov 2025 | Private" in tiny light gray
+- Fonts: Inter (body) + Libre Baskerville (name)
+- Fully responsive + print = perfect one-page A4 PDF (no shadows, no gradient in print)
+
+### Technical Requirements
+- All CSS delivered minified
+- Full Web Crypto API usage (AES-GCM, subtle.crypto.importKey, etc.)
+- Proper error handling (failed decryption → silent fallback to public)
+- robots.txt must block everything (User-agent: * Disallow: / + specific AI bots)
+- index.html must contain complete <meta> blockade:
+  noindex, nofollow, noarchive, nosnippet, noimageindex
+  + specific blocks for GPTBot, ClaudeBot, Googlebot, etc.
+- UUID/key handling must be case-insensitive everywhere
+
+### Output You Must Provide
+1. index.html (complete with all meta tags)
+2. css/style.css (fully minified, current ultra-compact version with ORCID styling)
+3. js/main.js (fully commented, including blind decryption loop)
+4. 404.html (with redirect + loading message)
+5. generate-bin.py (working script using cryptography.hazmat, supports multiple files)
+6. robots.txt (complete block)
+7. .gitignore (containing data/private)
+8. data/public.json (full working example with ORCID)
+9. data/schema.json (complete commented schema)
+10. One example private file (e.g. academic_uk.json)
+11. Final README.md explaining the full system + how to replicate using this prompt
+
+Make it beautiful, private, multilingual-ready, print-perfect, and ultra-professional — exactly like a top-tier AI researcher’s personal site in 2025.
+
+Reference date: 17 November 2025

@@ -1,0 +1,104 @@
+{
+  "contact": {
+    "name": "Saeed EY",
+    "location": "Tehran, Iran",
+    "city": "Tehran",
+    "province": null,
+    "country": "Iran",
+    "email": "samspark@gmail.com",
+    "phone": "+98 921 123 4567",
+    "linkedin": "linkedin.com/in/saeedey",
+    "github": "github.com/saeedey",
+    "website": "https://saeedey.github.io",
+    "orcid": "0000-0002-0813-7373"
+  },
+
+  "tagline": "AI Researcher • Medical Imaging • Deep Learning",
+
+  "research_interests": "Deep learning for medical image analysis, transformer-based diagnostic models, privacy-preserving AI, uncertainty estimation in healthcare applications.",
+
+  "about_me": "Passionate about bridging cutting-edge AI with real clinical impact. Currently focused on robust, interpretable models for radiology and pathology. Outside the lab: cycling, photography, and Persian poetry.",
+
+  "education": [
+    {
+      "title": "Ph.D. in Artificial Intelligence",
+      "time": "2023 – Present",
+      "school": "Technical University of Delft, Netherlands",
+      "content": "Thesis: Transformer-based uncertainty-aware diagnosis in medical imaging\nAdvisor: Prof. Dr. Maria Jansen\nGPA: 9.8/10"
+    },
+    {
+      "title": "M.Sc. in Computer Science",
+      "time": "2020 – 2022",
+      "school": "University of Amsterdam, Netherlands",
+      "content": "Specialization: Machine Learning & Computer Vision\nThesis: Self-supervised learning for MRI reconstruction\nGraduated cum laude"
+    }
+  ],
+
+  "work_experience": [
+    {
+      "title": "Research Assistant",
+      "company": "Delft Medical Vision Lab",
+      "time": "2023 – Present",
+      "content": "• Developed NeuralDiagnosis: a transformer-based diagnostic engine achieving 94% accuracy on private datasets\n• Published 3 first-author papers at MICCAI and NeurIPS workshops\n• Led collaboration with Amsterdam UMC radiologists"
+    },
+    {
+      "title": "Machine Learning Engineer (Intern)",
+      "company": "Siemens Healthineers",
+      "time": "Summer 2022",
+      "content": "• Improved MRI reconstruction pipeline using diffusion models\n• Reduced inference time by 40% while maintaining diagnostic quality\n• Co-authored internal patent application"
+    }
+  ],
+
+  "featured_project": {
+    "title": "NeuralDiagnosis Engine",
+    "time": "2023 – 2024",
+    "description": "End-to-end transformer architecture for multi-modal medical diagnosis with built-in uncertainty quantification and privacy-preserving federated learning capabilities.",
+    "tech": "PyTorch • MONAI • Transformers • Federated Learning • Docker",
+    "features": "• 94% accuracy on internal radiology dataset\n• Calibrated uncertainty via conformal prediction\n• Differential privacy guarantees\n• Real-time inference (<200ms)",
+    "github": "samspark/neuraldiagnosis"
+  },
+
+  "skills": {
+    "Programming": ["Python", "C++", "JavaScript", "MATLAB"],
+    "Deep Learning": ["PyTorch", "TensorFlow", "JAX", "MONAI", "Hugging Face"],
+    "Medical Imaging": ["MRI", "CT", "X-Ray", "Ultrasound", "DICOM", "NIfTI"],
+    "Tools": ["Git", "Docker", "Linux", "LaTeX", "AWS", "Slurm"]
+  },
+
+  "publications": [
+    {
+      "title": "Uncertainty-Aware Diagnosis with Vision Transformers",
+      "venue": "MICCAI 2025",
+      "year": "2025",
+      "link": "https://arxiv.org/abs/2501.12345"
+    },
+    {
+      "title": "Federated Learning for Privacy-Preserving Medical AI",
+      "venue": "NeurIPS Workshop 2024",
+      "year": "2024",
+      "link": "https://openreview.net/forum?id=abc123"
+    }
+  ],
+
+  "certificates": [
+    "AWS Certified Machine Learning – Specialty (2024)",
+    "DeepLearning.AI TensorFlow Developer Professional Certificate",
+    "Stanford Online: AI in Healthcare Specialization"
+  ],
+
+  "languages": [
+    "Persian (Native)",
+    "English (Fluent)",
+    "Dutch (B2)",
+    "German (A2)"
+  ],
+
+  "interests": [
+    "Long-distance cycling",
+    "Film photography (Leica M6)",
+    "Persian classical poetry",
+    "Coffee roasting"
+  ],
+
+  "updated": "2025-11-17"
+}

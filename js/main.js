@@ -148,6 +148,7 @@ function render(d, isPrivate) {
   if (c.linkedin) contactParts.push(`<a href="https://${esc(c.linkedin)}">LinkedIn</a>`);
   if (c.github)   contactParts.push(`<a href="https://github.com/${esc(c.github)}">GitHub</a>`);
   if (c.website)  contactParts.push(`<a href="${esc(c.website)}">${esc(c.website.replace(/^https?:\/\//, ""))}</a>`);
+  if (c.orcid)    contactParts.push(`<a href="https://orcid.org/${esc(c.orcid)}">ORCID</a>`);
   if (c.phone)    contactParts.push(`<span title="phone">${esc(c.phone)}</span>`);
 
   h.push(contactParts.join(" • "));
