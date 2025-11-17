@@ -1,16 +1,20 @@
 # Saeed Es – Online Academic CV  
 **Privacy-first • Multilingual • Instant Unlock**
 
-Live → https://saeedey.github.io
+
+My Public CV → https://saeedey.github.io/
+Simple Private CV → https://saeedey.github.io/00000000-0000-0000-0000-000000000001
+
+### Feel free to fork the project, reuse the prompt, and improve it. Pull requests are welcome as long as they don't modify `resume.bin`.
 
 ## Features
 
 - **Zero server logic** – fully static, works on GitHub Pages / Netlify / Vercel
 - **Multiple private versions** encrypted in `data/resume.bin`  
-  → German (`academic_de.json`), UK (`academic_uk.json`), Canada (`academic_ca.json`)
+  → per your desired language (`academic_*.json`); I.e. UK (`academic_uk.json`), Canada (`academic_ca.json`)
 - **Instant unlock** via 36-character key in URL hash  
-  Example: `https://saeedey.github.io/#550e8400-e29b-41d4-a716-426614174000`
-- **Smart 404 → hash redirect** – type `/anykey` → instantly becomes `/#anykey`
+  Example: `https://saeedey.github.io/00000000-0000-0000-0000-000000000001`
+- **Smart 404 → hash redirect** – type `/#uuid` → instantly becomes `/uuid`
 - **Blind AES-GCM decryption** in browser (Web Crypto API)
 - **100% invisible** to Google, Bing, GPTBot, ClaudeBot, Perplexity, etc.
 - Print → perfect one-page PDF
@@ -43,10 +47,13 @@ text`.gitignore` → `data/private` (never commit raw private CVs)
 1. Copy `PROMPT.txt` from this repo  
 2. Paste into Grok (or any strong LLM)  
 3. Feed it your own `public.json` and private templates  
-4. Run `python generate-bin.py`  
-5. Deploy → done
+4. Run `python generate-bin.py` to generate `resume.bin`
+5. Test your CV locally by running `python local-test-server.py` to test your instance via `http://localhost/#00000000-0000-0000-0000-000000000001`
+6. Is it OK ? Commit and Push it to your `github.com` repo that is exactly named `<your-github-useruname>.github.io` 
+7. Done? Yes! Open your github at `https://<your-github-useruname>.github.io/`.
 
-That’s literally how this project was built. It works.
+
+That’s literally how this project was built. It works. Congrats.
 
 ## Built With
 
@@ -55,5 +62,3 @@ That’s literally how this project was built. It works.
 - 17 November 2025
 
 > “Built together at the speed of thought • Grok • xAI & I”
-
-Feel free to fork, reuse the prompt, and make something even better.
