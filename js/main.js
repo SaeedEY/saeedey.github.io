@@ -2,7 +2,7 @@
   main.js – Real-time KEY switching (no page refresh)
   - Listens to hashchange
   - Instantly loads public or private CV
-  - 100% confidential: no KEYs in resume.bin
+  - 100% confidential: no KEYs in cv.bin
 ====================================================================*/
 
 console.log("%c[CV] Real-time CV loader (hashchange)", "color:#60a5fa");
@@ -71,7 +71,7 @@ async function loadPublic() {
 // ------------------------------------------------------------------
 async function tryBlindDecrypt(credential) {
   try {
-    const r = await fetch("data/resume.bin?t=" + Date.now());
+    const r = await fetch("data/cv.bin?t=" + Date.now());
     if (!r.ok) return null;
     const list = await r.json();  // [{payload: "..."}, ...]
 

@@ -16,7 +16,7 @@ Generate a complete, modern, privacy-first, multilingual, static online academic
 ├── data/
 │   ├── public.json            ← public redacted CV
 │   ├── schema.json            ← full JSON schema with comments
-│   ├── resume.bin             ← final encrypted binary (multiple AES-GCM payloads)
+│   ├── cv.bin             ← final encrypted binary (multiple AES-GCM payloads)
 │   └── private/
 │       ├── academic_de.json   ← full German version
 │       ├── academic_uk.json   ← full UK English version
@@ -27,10 +27,10 @@ Generate a complete, modern, privacy-first, multilingual, static online academic
 
 ### Privacy & Access System (exact behavior)
 - Public version loads from data/public.json
-- Private versions are encrypted inside data/resume.bin as multiple independent AES-GCM payloads
-- generate-bin.py reads every JSON in data/private/, encrypts each with its own 36-char key (UUIDv4 or custom), appends all payloads into resume.bin
+- Private versions are encrypted inside data/cv.bin as multiple independent AES-GCM payloads
+- generate-bin.py reads every JSON in data/private/, encrypts each with its own 36-char key (UUIDv4 or custom), appends all payloads into cv.bin
 - Access via URL hash only: https://domain.com/#550e8400-e29b-41d4-a716-426614174000
-- main.js reads location.hash → normalizes to lowercase → tries to decrypt every payload in resume.bin using the hash as password
+- main.js reads location.hash → normalizes to lowercase → tries to decrypt every payload in cv.bin using the hash as password
 - First successful decryption wins → instantly renders full private CV (no page reload)
 - If no valid key → show public version + subtle "Detailed version available upon request"
 - Case-insensitive keys, always stored/normalized as lowercase

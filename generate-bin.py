@@ -1,5 +1,4 @@
-
-# Generates data/resume.bin → list of encrypted payloads (NO KEYs inside)
+# Generates data/cv.bin → list of encrypted payloads (NO KEYs inside)
 
 import json
 import os
@@ -16,7 +15,7 @@ PRIVATE_DIR = "data/private"
 
 # Load your private CV JSON files
 cv_files = {
-    "00000000-0000-0000-0000-000000000000": f"{PRIVATE_DIR}/academic_ca.json",
+    "00000000-0000-0000-0000-000000000001": f"{PRIVATE_DIR}/academic_test.json",
 }
 
 # ===================================================================
@@ -54,11 +53,11 @@ for credential, file_path in cv_files.items():
     payloads.append({"payload": payload_b64})
 
 # ===================================================================
-# WRITE resume.bin → ONLY encrypted payloads
+# WRITE cv.bin → ONLY encrypted payloads
 # ===================================================================
 
 os.makedirs("data", exist_ok=True)
-output_path = "data/resume.bin"
+output_path = "data/cv.bin"
 
 with open(output_path, "w", encoding="utf-8") as f:
     json.dump(payloads, f, indent=2)

@@ -2,15 +2,17 @@
 **Privacy-first • Multilingual • Instant Unlock**
 
 
-My Public CV → https://saeedey.github.io/
-Simple Private CV → https://saeedey.github.io/00000000-0000-0000-0000-000000000001
+- My Public CV → https://saeedey.github.io/
+- Simple Private CV → https://saeedey.github.io/00000000-0000-0000-0000-000000000001
 
-### Feel free to fork the project, reuse the prompt, and improve it. Pull requests are welcome as long as they don't modify `resume.bin`.
+**ATTENTION !** *Dear Password crackers, hold your curious mind, `cv.bin` have nothing but the same simple stuff that are on my LinkedIn :D !*
+
+### Feel free to fork the project, reuse the prompt, and improve it. Pull requests are welcome as long as they don't modify `cv.bin`.
 
 ## Features
 
 - **Zero server logic** – fully static, works on GitHub Pages / Netlify / Vercel
-- **Multiple private versions** encrypted in `data/resume.bin`  
+- **Multiple private versions** encrypted in `data/cv.bin`  
   → per your desired language (`academic_*.json`); I.e. UK (`academic_uk.json`), Canada (`academic_ca.json`)
 - **Instant unlock** via 36-character key in URL hash  
   Example: `https://saeedey.github.io/00000000-0000-0000-0000-000000000001`
@@ -28,11 +30,11 @@ Simple Private CV → https://saeedey.github.io/00000000-0000-0000-0000-00000000
 ##### ├── robots.txt
 ##### ├── PROMPT.txt                 ← how this entire project was built
 ##### ├── README.md
-##### ├── generate-bin.py            ← encrypts all private/*.json → resume.bin
+##### ├── generate-bin.py            ← encrypts all private/*.json → cv.bin
 ##### ├── data/
 ##### │   ├── public.json
 ##### │   ├── schema.json
-##### │   ├── resume.bin             ← encrypted bundle (multiple payloads)
+##### │   ├── cv.bin             ← encrypted bundle (multiple payloads)
 ##### │   └── private/
 ##### │       ├── academic_de.json   ← German version
 ##### │       ├── academic_uk.json   ← UK version
@@ -47,7 +49,7 @@ text`.gitignore` → `data/private` (never commit raw private CVs)
 1. Copy `PROMPT.txt` from this repo  
 2. Paste into Grok (or any strong LLM)  
 3. Feed it your own `public.json` and private templates  
-4. Run `python generate-bin.py` to generate `resume.bin`
+4. Run `python generate-bin.py` to generate `cv.bin`
 5. Test your CV locally by running `python local-test-server.py` to test your instance via `http://localhost/#00000000-0000-0000-0000-000000000001`
 6. Is it OK ? Commit and Push it to your `github.com` repo that is exactly named `<your-github-useruname>.github.io` 
 7. Done? Yes! Open your github at `https://<your-github-useruname>.github.io/`.
