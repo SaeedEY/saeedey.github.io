@@ -50,7 +50,7 @@ async function loadAndRender() {
 // ------------------------------------------------------------------
 function extractKEY() {
   const h = location.hash.slice(1).trim();
-  const re = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+  const re = /^[0-9A-f]{8}-[0-9A-f]{4}-[0-9A-z]{4}-[0-9A-f]{4}-[0-9A-f]{12}$/i;
   return re.test(h) ? h.toLowerCase() : null;
 }
 
