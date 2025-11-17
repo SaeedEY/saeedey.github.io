@@ -260,7 +260,7 @@ function render(d, isPrivate) {
   if (!isPrivate) {
     h.push(`<a class="request" href="https://${esc(d.askforcv || c.linkedin || "#")}">This public version is limited. Please request a full version of my curriculum vitae if needed.</a>`);
   }
-  const date = d.updated ? new Date(d.updated).toLocaleDateString('en-GB', {day:'numeric', month:'short', year:'numeric'}) : "15 Nov 2025";
+  const date = d.updated ? new Date(d.updated).toLocaleDateString('en-GB', {day:'numeric', month:'short', year:'numeric'}) + " © SaeedEY.github.io": "15 Nov 2025, © SaeedEY.github.io";
   const access = isPrivate ? "Private" : "";
   h.push(`<div class="footer"><span>${date}</span>${access ? `<span class="sep">|</span><span>${access}</span>` : ""}</div>`);
 
