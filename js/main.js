@@ -205,32 +205,34 @@ function render(d, isPrivate) {
   }
 
   // ---------- Academic Project ----------
-  if ((d.featured_project || d.project) && isPrivate) {
-    const p = d.featured_project || d.project || {};
-    let block = `<div class="project-block">`;
-    
-    // Title + Time on its own line
-    block += `<div class="project-title"><strong>${esc(p.title)}</strong> — ${esc(p.time)}</div>`;
-    
-    // Description
-    if (p.description) block += `<div class="project-desc">${esc(p.description)}</div>`;
-    
-    // Tech stack
-    if (p.tech) block += `<div class="project-tech"><em>${esc(p.tech)}</em></div>`;
-    
-    // Bulleted features
-    if (p.features) {
-      const bullets = p.features.split(/\n|<br>/i)
-        .filter(l => l.trim().startsWith("•"))
-        .map(l => `<li>${esc(l.slice(1).trim())}</li>`).join("");
-      if (bullets) block += `<ul class="bullets">${bullets}</ul>`;
-    }
-    
-    // GitHub link
-    if (p.github) block += `<div class="project-link"><a href="https://github.com/${esc(p.github)}">GitHub</a></div>`;
-    
-    block += `</div>`;
-    addSection("Academic Project", block);
+  if (d.featured_projects?.length && isPrivate) {
+    const projects = (d.featured_projects || []).map(p => {
+      let block = `<div class="project-block">`;
+      
+      // Title + Time on its own line
+      block += `<div class="project-title"><strong>${esc(p.title)}</strong> — ${esc(p.time)}</div>`;
+      
+      // Description
+      if (p.description) block += `<div class="project-desc">${esc(p.description)}</div>`;
+      
+      // Tech stack
+      if (p.tech) block += `<div class="project-tech"><em>${esc(p.tech)}</em></div>`;
+      
+      // Bulleted features
+      if (p.features) {
+        const bullets = p.features.split(/\n|<br>/i)
+          .filter(l => l.trim().startsWith("•"))
+          .map(l => `<li>${esc(l.slice(1).trim())}</li>`).join("");
+        if (bullets) block += `<ul class="bullets">${bullets}</ul>`;
+      }
+
+      // GitHub link
+      if (p.ref && p.ref.link) block += `<div class="project-link"><a href="${esc(p.ref.link)}">${p.ref.label || p.ref.link || "link"}</a></div>`;
+      
+      block += `</div>`;
+      return block;
+    }).join("");
+    addSection("Academic Projects", projects);
   }
 
   // ---------- Publications ----------

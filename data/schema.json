@@ -49,15 +49,17 @@
     }
   ],
 
-  "featured_project": {
-    "title": "NeuralDiagnosis Engine",
-    "time": "2023 – 2024",
-    "description": "End-to-end transformer architecture for multi-modal medical diagnosis with built-in uncertainty quantification and privacy-preserving federated learning capabilities.",
-    "tech": "PyTorch • MONAI • Transformers • Federated Learning • Docker",
-    "features": "• 94% accuracy on internal radiology dataset\n• Calibrated uncertainty via conformal prediction\n• Differential privacy guarantees\n• Real-time inference (<200ms)",
-    "github": "samspark/neuraldiagnosis"
-  },
-
+  "featured_projects": [
+    {
+      "title": "NeuralDiagnosis Engine",
+      "time": "2023 – 2024",
+      "description": "End-to-end transformer architecture for multi-modal medical diagnosis with built-in uncertainty quantification and privacy-preserving federated learning capabilities.",
+      "tech": "PyTorch • MONAI • Transformers • Federated Learning • Docker",
+      "features": "• 94% accuracy on internal radiology dataset\n• Calibrated uncertainty via conformal prediction\n• Differential privacy guarantees\n• Real-time inference (<200ms)",
+      "ref": {"label": "source", "link": "https://github.com/SaeedEY/#"}
+    }
+  ],
+  
   "skills": {
     "Programming": ["Python", "C++", "JavaScript", "MATLAB"],
     "Deep Learning": ["PyTorch", "TensorFlow", "JAX", "MONAI", "Hugging Face"],

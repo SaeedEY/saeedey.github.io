@@ -32,12 +32,15 @@
     "ai_ml": ["OpenCV", "Haar Cascades", "Supervised ML (Stanford Coursera)", "NumPy (limited)"]
   },
 
-  "featured_project": {
-    "title": "Eye-Zoom – Real-Time Eye Tracking for Accessibility",
-    "time": "B.Sc. Final Project",
-    "description": "Developed a hands-free web browser controller using Python + OpenCV (Haar Cascade classifiers) that detects and tracks eye movements in real time. Designed specifically for users with severe physical disabilities.",
-    "features": "• Zoom in/out (& basic navigation in future) via eye gestures"
-  },
+  "featured_projects": [
+    {
+      "title": "Eye-Zoom – Real-Time Eye Tracking for Accessibility",
+      "time": "B.Sc. Final Project",
+      "description": "Developed a hands-free web browser controller using Python + OpenCV (Haar Cascade classifiers) that detects and tracks eye movements in real time. Designed specifically for users with severe physical disabilities.",
+      "features": "• Zoom in/out (& basic navigation in future) via eye gestures",
+      "ref": {"label": "source", "link": "https://github.com/#"}
+    }
+  ],
 
   "certificates": [
     "Supervised Machine Learning (Stanford – DeepLearning.AI)",

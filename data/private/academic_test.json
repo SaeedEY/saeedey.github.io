@@ -31,13 +31,16 @@
       "Lotem_Ipsum": ["Lorem", "Ipsum", "is", "simply", "dummy"]
     },
   
-    "featured_project": 
-    {
-      "title": "Project of Lorem Ipsum",
-      "time": "Jan 2024",
-      "description": "• Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm.\n• Lorem Ipsum is simply dummy text of the.\n• Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip.\n• Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "features": "Jan 2024 – Present (xx months)"
-    },
+    "featured_project": [
+      {
+        "title": "Project of Lorem Ipsum",
+        "time": "Jan 2024",
+        "description": "• Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm.\n• Lorem Ipsum is simply dummy text of the.\n• Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip.\n• Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "features": "Jan 2024 – Present (xx months)",
+        "ref": {"label": "source", "link": "https://github.com/SaeedEY/#"}
+      }
+    ],
+
     "certificates": [
       "Lorem Ipsum is simply dummy text certificate - No 1",
       "Lorem Ipsum is simply dummy text certificate - No 2",
